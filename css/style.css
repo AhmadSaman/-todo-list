@@ -1,0 +1,434 @@
+body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  background: #cff1ef;
+  font-family: "Baloo Bhaina 2", cursive;
+  font-size: 1.2em;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+/* ----------------------------------------------------------- Adding todo------------------------------------------------------------------------- */
+.input-group {
+  display: flex;
+  background: #ffffff;
+  margin: 50px auto;
+  border-radius: 15px;
+  /* box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+        0 100px 80px rgba(0, 0, 0, 0.12); */
+
+  animation-name: fadeInDown;
+  animation-duration: 1s;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    -moz-transform: translate3d(0, -100%, 0);
+
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, -100%, 0);
+
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.input-bar {
+  font-size: 1.2rem;
+  color: #be79df;
+  border: none;
+  outline: none;
+  background: none;
+  padding-left: 10px;
+  font-family: "Baloo Bhaina 2", cursive;
+}
+
+::placeholder {
+  color: #be79df;
+  opacity: 0.5;
+}
+
+.pra-button {
+  position: relative;
+  border: none;
+  outline: none;
+  background: #be79df;
+  transition: all 1s ease;
+  background-image: url("../img/priority.svg");
+  background-position: center;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  color: #be79df;
+}
+
+.pra-button:hover {
+  background: #fbcffc;
+  background-image: url("../img/priority1.svg");
+  background-position: center;
+  background-position-x: 10px;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  color: #be;
+}
+
+.date-button {
+  text-align: right;
+  border: none;
+  outline: none;
+  background: #be79df;
+  transition: all 1s ease;
+  background-image: url("../img/calendar.svg");
+  background-position: center;
+  background-size: 20px;
+  background-repeat: no-repeat;
+}
+
+.date-button:hover {
+  background: #fbcffc;
+  background-image: url("../img/calendar1.svg");
+  background-position: center;
+  background-position-x: 10px;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  width: 20%;
+}
+
+.date-button::-webkit-datetime-edit {
+  color: #be79df;
+}
+
+.date-button::-moz-datetime-edit {
+  color: #be79df;
+}
+
+.input-button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-top-right-radius: inherit;
+  border-bottom-right-radius: inherit;
+  background: #be79df;
+  /* box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12); */
+  transition: all 1s ease;
+  background-image: url("../img/down-arrow.svg");
+  background-position: center;
+  background-size: 20px;
+  background-repeat: no-repeat;
+}
+
+.input-button:hover {
+  background: #fbcffc;
+  background-image: url("../img/down-arrow2.svg");
+  background-position: center;
+  background-size: 20px;
+  background-repeat: no-repeat;
+}
+
+option {
+  color: #be79df;
+}
+
+/* .red {
+  background-color: red;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.green {
+  background-color: green;
+}
+
+.orange {
+  background-color: orange;
+} */
+
+/*------------------------------------------------------------------------ adding li ------------------------------------------------------*/
+.todo-ul {
+  padding-left: 0;
+  height: 100%;
+}
+
+.todo-li {
+  display: flex;
+  overflow: hidden;
+  background: #ffffff;
+  position: relative;
+  margin: 50px auto;
+  border-radius: 15px;
+  /* box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12); */
+  transition: all 1s ease;
+  animation-name: fadeInDown;
+  animation-duration: 1s;
+  z-index: 0;
+}
+
+.text-li {
+  line-height: 1.3;
+  list-style-type: none;
+  font-size: 1.2rem;
+  color: #be79df;
+  padding-top: 15px;
+  border: none;
+  outline: none;
+  background: none;
+  padding-left: 10px;
+  font-family: "Baloo Bhaina 2", cursive;
+}
+
+.delete-button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-top-right-radius: inherit;
+  border-bottom-right-radius: inherit;
+  background: #be79df;
+  /* box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12); */
+  transition: all 1s ease;
+  background-image: url("../img/delete.svg");
+  background-position: center;
+  background-size: 20px;
+  background-repeat: no-repeat;
+}
+
+.delete-button:hover {
+  background: #fbcffc;
+  background-image: url("../img/delete1.svg");
+  background-position: center;
+  background-size: 20px;
+  background-repeat: no-repeat;
+}
+
+.delete {
+  display: none;
+}
+
+.done {
+  transition: all 2s ease;
+  background: lightgreen;
+}
+
+.small-date,
+.small-pra {
+  border: none;
+  outline: none;
+  background: #be79df;
+  transition: all 1s ease;
+  /* background-image: url("../img/calendar.svg");
+  background-position: center;
+  background-position-x: 10px;
+  background-size: 20px;
+  background-repeat: no-repeat; */
+  color: #fbcffc;
+  font-size: 16px;
+  width: 10%;
+  padding: 10px 0 0 5px;
+}
+
+.small-pra:hover,
+.small-date:hover {
+  background: #fbcffc;
+  /* background-image: url("../img/calendar1.svg");
+  background-position: center;
+  background-position-x: 10px;
+  background-size: 20px;
+  background-repeat: no-repeat; */
+  color: #be79df;
+  font-size: 16px;
+  width: 10%;
+  padding: 10px 0 0 5px;
+}
+
+/* 
+.drop-down-off {
+  display: contents;
+}
+
+
+.drop-down {
+  display: block;
+  background: #fbcffc;
+  font-size: 16px;
+  color: #be79df;
+  padding: 10px;
+  border: solid 2px#be79df;
+  border-radius: 10px;
+  width: 240px;
+  position: absolute;
+  top: 110%;
+  cursor: pointer;
+  animation-name: fade;
+  animation-duration: 1s;
+  z-index: 1;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+
+
+}
+
+.drop-down div {
+  padding-left: 2px;
+  transition: all 1s ease;
+}
+
+.drop-down div:hover {
+  background-color: #be79df;
+  color: #fbcffc;
+  border-radius: 5px;
+  transition: all 0.1s ease;
+}
+
+@keyframes fade {
+  from {
+    margin-top: 100px;
+    opacity: 0.5;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+} */
+
+/*----------------------------------------------------------------- responsive ------------------------------------------------------------  */
+
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 90%;
+  }
+
+  .input-group,
+  .todo-li {
+    width: 100%;
+    height: 50px;
+  }
+
+  .input-bar,
+  .text-li {
+    width: 90%;
+    height: 100%;
+  }
+
+  .input-button,
+  .second-button,
+  .delete-button,
+  .date-button,
+  .pra-button {
+    width: 5%;
+    height: 100%;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .container {
+    width: 90%;
+  }
+
+  .input-group,
+  .todo-li {
+    width: 100%;
+    height: 50px;
+  }
+
+  .input-bar,
+  .text-li {
+    width: 90%;
+    height: 100%;
+  }
+
+  .input-button,
+  .second-button,
+  .delete-button,
+  .date-button,
+  .pra-button {
+    width: 5%;
+    height: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    width: 90%;
+  }
+
+  .input-group,
+  .todo-li {
+    width: 100%;
+    height: 50px;
+  }
+
+  .input-bar,
+  .text-li {
+    width: 90%;
+    height: 100%;
+  }
+
+  .input-button,
+  .second-button,
+  .delete-button,
+  .date-button,
+  .pra-button {
+    width: 5%;
+    height: 100%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .container {
+    width: 90%;
+  }
+
+  .input-group,
+  .todo-li {
+    width: 100%;
+    height: 50px;
+  }
+
+  .input-bar,
+  .text-li {
+    width: 90%;
+    height: 100%;
+  }
+
+  .input-button,
+  .second-button,
+  .delete-button,
+  .date-button,
+  .pra-button {
+    width: 5%;
+    height: 100%;
+  }
+
+  .small-pra:hover {
+    text-align: center;
+    width: 30%;
+  }
+}

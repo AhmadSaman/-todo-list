@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>todo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="input-group">
+      <input id="userinput" autocomplete="off" type="text" class="input-bar" placeholder="write your tasks....." />
+      <select name="priority" id="priority" class="pra-button">
+        <!-- <div id="pra-options" class="drop-down"> -->
+        <option value=""><img src="img/priority.svg" alt="" /></option>
+        <option class="red" value="URGENT and IMPORTANT">
+          URGENT and IMPORTANT
+        </option>
+        <option class="blue" value="IMPORTANT BUT NOT SO URGENT">
+          IMPORTANT BUT NOT SO URGENT
+        </option>
+        <option class="orange" value="URGENT BUT NOT SO IMPORTANT">
+          URGENT BUT NOT SO IMPORTANT
+        </option>
+        <option class="green" value="NOT IMPORTANT NOR URGENT">
+          NOT IMPORTANT NOR URGENT
+        </option>
+        <!-- </div> -->
+      </select>
+      <input type="date" name="date" id="date-input" autocomplete="off" class="date-button" />
+      <input type="submit" id="enter" class="input-button" value=" ">
+    </div>
+    <ul class="todo-ul">
+      <!-- <div class="todo-li">
+                <li class="text-li">hi im here Lorem ipsum, dolor </li>
+                <button class="delete-button">D</button>
+            </div> -->
+    </ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
